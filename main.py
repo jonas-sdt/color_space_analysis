@@ -20,10 +20,6 @@ ax.set_xticks(np.arange(0, 256, 64))
 ax.set_yticks(np.arange(0, 256, 64))
 ax.set_zticks(np.arange(0, 256, 64))
 
-# add pixel colors to scatter plot
-cdict = {'red': red.flatten(), 'green': green.flatten(), 'blue': blue.flatten()}
-cmp = mpl.colors.LinearSegmentedColormap('testCmap', segmentdata=cdict, N=256)
-
 C = np.array([red.flatten(), green.flatten(), blue.flatten()]).T
 ax.scatter(red.flatten(), green.flatten(), blue.flatten(), c=C/255.0, marker='.')
 
